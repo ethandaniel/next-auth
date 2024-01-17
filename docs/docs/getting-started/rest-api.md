@@ -9,6 +9,8 @@ NextAuth.js exposes a REST API that is used by the NextAuth.js client.
 
 Displays the built-in/unbranded sign-in page.
 
+Add the URL search param callbackUrl to return to a page after sign-in: `?callbackUrl=/dashboard`. This is useful when someone is not authenticated and you want to redirect them from the server to the sign-in page. Once the user is authenticated they will be brought to the callbackUrl in the URL search param.
+
 #### `POST` /api/auth/signin/:provider
 
 Starts a provider-specific sign-in flow.
